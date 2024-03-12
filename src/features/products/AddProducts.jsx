@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import TextField from '../../components/TextField'
 import Button from '../../components/Button'
 import { v4 as uuidv4 } from 'uuid';
@@ -33,17 +33,23 @@ const AddProducts = () => {
               label="Title"
               value={values.title}
               onChange={(e) => setValues({...values, title: e.target.value})}
-          inputProps={{type: 'text', placeholder: 'Nike Shirt'}}/>
+              inputProps={{ type: 'text', placeholder: 'Nike Shirt' }}
+              required
+          />
           <TextField
               label="Image"
               value={values.image}
                onChange={(e) => setValues({...values, image: e.target.value})}
-          inputProps={{type: 'url', placeholder: 'https://www.image.com'}}/>
+              inputProps={{ type: 'url', placeholder: 'https://www.image.com' }}
+              required
+          />
           <TextField
               label="Price"
               value={values.price}
                onChange={(e) => setValues({...values, price: e.target.value})}
-              inputProps={{ type: 'number', placeholder: '$9.99' }} />
+              inputProps={{ type: 'number', placeholder: '$9.99' }}
+              required
+          />
           <Button onClick={handleAddProduct}>Submit</Button>
     </div>
   )

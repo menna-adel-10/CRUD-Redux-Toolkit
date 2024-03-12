@@ -16,7 +16,7 @@ const ProductList = () => {
     const renderCard = () => products.map(product => (
         <a href="#" className="group block overflow-hidden pb-8 mx-4" key={product.id}>
   <div className="relative h-[350px] sm:h-[450px]">
-    <img
+    <img 
       src={product.image}
       alt=""
       className="absolute inset-0 h-full w-full object-cover opacity-100"
